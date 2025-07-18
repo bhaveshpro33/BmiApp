@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resultLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181922"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/margin_large"
+
+    android:gravity="center_horizontal">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your BMI is"
+        android:textSize="18sp"
+        android:textColor="#3162F5"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40sp"/>
+
+    <!-- Circular Progress with BMI value -->
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        app:cpb_progress="20"
+        app:cpb_progress_max="40"
+        app:cpb_progressbar_width="22dp"
+        app:cpb_background_progressbar_width="22dp"
+        app:cpb_progressbar_color="#3162F5"
+        app:cpb_background_progressbar_color="#E0E0E0"
+        app:cpb_round_border="true"
+        app:cpb_progress_direction="to_right"
+
+        />
+
+
+    <!-- BMI value (centered in circle visually) -->
+    <TextView
+        android:id="@+id/bmiValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20.4"
+        android:textColor="#3162F5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-150dp"/>
+
+    <!-- Category label -->
+    <TextView
+        android:id="@+id/bmiCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Underweight"
+        android:textColor="#3162F5"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="120dp" />
+
+    <!-- Info Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2d2d36"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="16dp"
+                    android:text="Your BMI is 20.7, indicating your height is in the Normal category for adults of your height."
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/advice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="16dp"
+                    android:text="For your height, a normal weight range would be from 53.5 to 72 kilograms.\n"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- Action Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/closebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="40sp"
+        android:backgroundTint="#3162F5"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:background="@drawable/rounded_button" />
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+    <color name="background_main">#D9E1F0</color>
+    <color name="background_result">#BCCBEB</color>
+    <color name="primary_button">#3162F5</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_dark">#1A1A1A</color>
+    <color name="text_light">#888888</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Default Material color -->
+    <color name="purple_500">#6200EE</color>
+
+    <!-- Transparent (for hiding stroke/border) -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Your custom stroke highlight -->
+    <color name="selected_stroke">#3162F5</color>
+    </resources>
